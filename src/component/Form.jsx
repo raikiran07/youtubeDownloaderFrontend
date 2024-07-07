@@ -52,12 +52,12 @@ const Form = () => {
     <div>
         <form onSubmit={handleDownload} className='max-w-[80%] md:max-w-[60%] lg:max-w-[50%] mx-auto mt-8 text-center p-2'>
            
-            <div className='mt-8'>
+            <div className='mt-8 border-4 border-dotted rounded-md'>
                 <input 
                 type="text" placeholder='paste youtube video link'
                 value={url}
                 onChange={(e)=>setUrl(e.target.value)}
-                className='border min-w-[90%] min-h-[80px] mt-4 p-2 rounded-md text-black text-xl'
+                className='border min-w-[90%] min-h-[80px] my-4 p-2 rounded-md text-black text-xl'
                  />
             </div>
             <button type='submit' className='border py-[5px] px-[10px] mt-4 bg-blue-600 text-white rounded-md'>Search</button>

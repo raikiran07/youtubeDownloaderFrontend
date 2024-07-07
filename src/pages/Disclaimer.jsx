@@ -5,7 +5,7 @@ const Disclaimer = () => {
     <div className='px-8 md:px-16'>
       
     <div className="resources">
-      <h2 className='text-blue-400 text-bold my-4'>YouTube Video Downloading Guidelines and Legal Actions</h2>
+      <h2 className='text-blue-600 text-bold my-4'>YouTube Video Downloading Guidelines and Legal Actions</h2>
       <ul>
         <li className='text-blue-600 mb-2'>
           <a href="https://www.youtube.com/static?template=terms" target="_blank" rel="noopener noreferrer">
