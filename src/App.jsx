@@ -3,14 +3,42 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Chat from './component/Chat'
-import Form from './component/Form'
+import { createBrowserRouter,Outlet,RouterProvider } from 'react-router-dom'
+import Main from './pages/Main'
+import Disclaimer from './pages/Disclaimer'
+import Layout from './component/Layout'
+
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<Layout/>,
+    children:[
+      {
+        path:'/',
+        element:<Main />
+      },
+      {
+        path:'/disclaimer',
+        element:<Disclaimer />
+      }
+    ]
+  }
+])
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <Form />
+    
+
+    <RouterProvider router = {router}>
+   
+    </RouterProvider>
+   
+   
+     
       
     </>
   )
