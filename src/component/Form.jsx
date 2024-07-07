@@ -69,7 +69,7 @@ const Form = () => {
             title="video"
           />
           :(
-             !isLoading && <p className='text-center mt-4'>Your will get options here to download</p>
+             !isLoading && <p className='text-center mt-4'>You will get options here to download</p>
           )
           
         }
