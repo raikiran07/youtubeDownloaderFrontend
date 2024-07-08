@@ -64,7 +64,7 @@ const Form = () => {
         </form>
         {
             data.url ?   <iframe
-            className='md:min-w-[640px] md:min-h-[300px] border mx-auto mt-4'
+            className='md:min-w-[640px] md:min-h-[300px] border-2 mx-auto mt-4'
             src={`${data.url}`}
             title="video"
           />
@@ -108,7 +108,7 @@ const Form = () => {
                             <select name="video" className='border p-2 rounded-md' value={downloadUrl} onChange={(e)=>setDownloadUrl(e.target.value)}>
                         {
                             data?.info?.map(video=>{
-                                if(video.hasAudio && video.hasAudio){
+                                if(video.hasAudio && video.hasVideo){
                                     return(
     
                                   
