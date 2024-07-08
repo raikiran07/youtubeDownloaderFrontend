@@ -18,21 +18,19 @@ const Form = () => {
        
         if(isValidUrl){
             setIsLoading(true)
-            console.log(url)
+           
            
             try {
                 const res = await axios.get(`https://youtubedownloaderbackend.onrender.com/download?url=${url}`)
-                console.log(res);
-                console.log(res.data)
+                
                 setData(res.data);
                 setIsLoading(false)
                 
     
             } catch (error) {
                 setIsLoading(false)
-                console.log(error)
-                alert("something went wrong")
-                console.log("something went wrong...")
+               
+               toast.error("something went wrong")
             }
 
         }
