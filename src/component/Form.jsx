@@ -21,7 +21,7 @@ const Form = () => {
            
            
             try {
-                const res = await axios.get(`https://youtubedownloaderbackend.onrender.com/download?url=${url}`)
+                const res = await axios.get(`http://13.235.24.72:5001/download?url=${url}`)
                 
                 setData(res.data);
                 setIsLoading(false)
@@ -85,13 +85,18 @@ const Form = () => {
                         data?.info?.map(video=>{
                             if(video.hasAudio && video.hasVideo){
                                 return(
-                                    <a href={`${video.url}`} target='_blank'>
+                                    <div  key={video.url}>
+                                        <a href={`${video.url}`} target='_blank'
+                                   
+                                    >
                                          <button className='border p-1 rounded-md bg-gray-200 text-black'>
         
                                         {video.mimeType.split(";")[0] + "   "}
                                         {video.hasVideo ? video.height + "p" : ""}
                                         </button>
                                     </a>
+                                    </div>
+                                    
                                    
                                 )
                             }
@@ -110,7 +115,9 @@ const Form = () => {
                                     return(
     
                                   
-                                        <option value={`${video.url}`}>
+                                        <option value={`${video.url}`}
+                                        key={video.url}
+                                        >
                                         <a href={`${video.url}`} target='_blank'>
                                         {video.mimeType.split(";")[0] + "   "}
                                         {video.hasVideo ? video.height + "p" : ""}
