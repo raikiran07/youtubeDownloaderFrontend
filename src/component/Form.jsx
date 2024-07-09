@@ -21,7 +21,7 @@ const Form = () => {
            
            
             try {
-                const res = await axios.get(`http://13.235.24.72:5001/download?url=${url}`)
+                const res = await axios.get(`https://youtubedownloaderbackend.onrender.com/download?url=${url}`)
                 
                 setData(res.data);
                 setIsLoading(false)
